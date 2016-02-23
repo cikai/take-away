@@ -53,30 +53,30 @@
   </nav>
 
   <div id="page">
-    <form class="form-inline">
+    <form class="form-inline" id="orderingForm">
       <div class="form-group">
         <label for="name">姓名：</label>
-        <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+        <input type="text" name="name" class="form-control" id="name" placeholder="请输入姓名">
       </div>
       <div class="form-group">
         <label for="food">美食：</label>
-        <select id="food" class="form-control">
-          <option>经典烤肉饭</option>
+        <select name="food" id="food" class="form-control">
+          <option value="0">经典烤肉饭</option>
         </select>
       </div>
       <div class="form-group">
         <label for="count">数量：</label>
-        <input type="text" class="form-control" id="count" value="1">
+        <input type="text" name="count" class="form-control" id="count" value="1">
       </div>
       <div class="form-group">
-        <label for="pay">支付方式：</label>
-        <select id="pay" class="form-control">
-          <option>微信支付</option>
-          <option>支付宝</option>
-          <option>现金支付</option>
+        <label for="payment">支付方式：</label>
+        <select name="payment" id="payment" class="form-control">
+          <option value="0">微信支付</option>
+          <option value="1">支付宝</option>
+          <option value="2">现金支付</option>
         </select>
       </div>
-      <input class="btn btn-info" type="submit" value="订 餐">
+      <button class="btn btn-info" id="submit">订 餐</button>
     </form>
   </div>
 

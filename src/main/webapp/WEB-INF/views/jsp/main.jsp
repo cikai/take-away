@@ -11,7 +11,6 @@
 <link rel='stylesheet' type='text/css' href='css/libs/bootstrap.css'>
 <link rel='stylesheet' type='text/css' href='css/libs/jquery.dataTables.css'>
 <link rel='stylesheet' type='text/css' href='css/libs/dataTables.bootstrap.css'>
-
 <link rel="stylesheet" type="text/css" href="css/top.css">
 <script src="js/libs/jquery-2.1.4.js"></script>
 <script src="js/libs/bootstrap.js"></script>

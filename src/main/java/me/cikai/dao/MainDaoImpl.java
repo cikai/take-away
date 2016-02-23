@@ -1,18 +1,58 @@
 package me.cikai.dao;
 
-import java.util.List;
-
-import org.springframework.stereotype.Repository;
+import javax.sql.DataSource;
 
 import me.cikai.dto.FormDto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class MainDaoImpl implements MainDao {
 
-	@Override
-	public List<FormDto> add(FormDto formDto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    private NamedParameterJdbcTemplate jdbcTemplate = null;
+
+    @Autowired
+    @Qualifier("testDB")
+    public void setDatasource(DataSource ds) {
+        jdbcTemplate = new NamedParameterJdbcTemplate(ds);
+    }
+
+    @Override
+    public void insert(FormDto formDto) {
+        final StringBuilder sql = new StringBuilder();
+        sql.append("INSERT ");
+        sql.append("INTO ");
+        sql.append("take_away_cikai ");
+        sql.append("( ");
+        sql.append("name, ");
+        sql.append("food, ");
+        sql.append("count, ");
+        sql.append("payment, ");
+        sql.append("time ");
+        sql.append(") ");
+        sql.append("VALUES ");
+        sql.append("( ");
+        sql.append(":name, ");
+        sql.append(":food, ");
+        sql.append(":count, ");
+        sql.append(":payment, ");
+        sql.append("NOW() ");
+        sql.append(") ");
+
+        MapSqlParameterSource paramMap = new MapSqlParameterSource();
+        paramMap.addValue("name", formDto.getName());
+        paramMap.addValue("food", formDto.getFood());
+        paramMap.addValue("count", formDto.getCount());
+        paramMap.addValue("payment", formDto.getPayment());
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        jdbcTemplate.update(sql.toString(), paramMap, keyHolder);
+
+    }
 
 }
