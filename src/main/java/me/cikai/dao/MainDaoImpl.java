@@ -18,7 +18,7 @@ public class MainDaoImpl implements MainDao {
     private NamedParameterJdbcTemplate jdbcTemplate = null;
 
     @Autowired
-    @Qualifier("testDB")
+    @Qualifier("take-away")
     public void setDatasource(DataSource ds) {
         jdbcTemplate = new NamedParameterJdbcTemplate(ds);
     }
@@ -28,7 +28,7 @@ public class MainDaoImpl implements MainDao {
         final StringBuilder sql = new StringBuilder();
         sql.append("INSERT ");
         sql.append("INTO ");
-        sql.append("take_away_cikai ");
+        sql.append("order_form ");
         sql.append("( ");
         sql.append("name, ");
         sql.append("food, ");

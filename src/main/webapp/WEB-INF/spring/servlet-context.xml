@@ -32,29 +32,5 @@
 		<property name="prefix" value="WEB-INF/views/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-<!--
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="testDB" />
-	</bean>
-
-	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="select*" read-only="true" />
-			<tx:method name="update*" propagation="REQUIRED" isolation="REPEATABLE_READ"
-				timeout="60000" read-only="false" rollback-for="java.lang.Exception" />
-			<tx:method name="delete*" propagation="REQUIRED" isolation="REPEATABLE_READ"
-				timeout="60000" read-only="false" rollback-for="java.lang.Exception" />
-			<tx:method name="add*" propagation="REQUIRED" isolation="REPEATABLE_READ"
-				timeout="60000" read-only="false" rollback-for="java.lang.Exception" />
-			<tx:method name="*Tx" propagation="REQUIRED" isolation="REPEATABLE_READ"
-				timeout="60000" read-only="false" rollback-for="java.lang.Exception" />
-		</tx:attributes>
-	</tx:advice>
-
-	<aop:config>
-		<aop:pointcut id="servicePointcut" expression="execution(* me.cikai.service..*(..))" />
-		<aop:advisor advice-ref="transactionAdvice" pointcut-ref="servicePointcut" />
-	</aop:config>
- -->
+	
 </beans>
