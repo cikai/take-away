@@ -4,6 +4,7 @@ import me.cikai.dto.FormDto;
 import me.cikai.model.FormModel;
 import me.cikai.service.MainService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 
+    @Autowired
     MainService service = null;
 
     @RequestMapping("/main")
