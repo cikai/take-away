@@ -4,7 +4,6 @@ import javax.sql.DataSource;
 
 import me.cikai.dto.FormDto;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -16,7 +15,7 @@ public class MainDaoImpl implements MainDao {
 
     private NamedParameterJdbcTemplate jdbcTemplate = null;
 
-    @Autowired
+    // @Autowired
     public void setDatasource(DataSource ds) {
         jdbcTemplate = new NamedParameterJdbcTemplate(ds);
     }

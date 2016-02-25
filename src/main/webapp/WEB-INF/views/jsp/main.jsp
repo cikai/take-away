@@ -22,7 +22,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>激动组订餐系统</title>
+<title>订餐系统</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)"><b>激动组订餐系统</b></a> <a class="navbar-brand">经典烤肉饭</a>
+        <a class="navbar-brand" href="javascript:void(0)"><b>订餐系统</b></a> <a class="navbar-brand">经典烤肉饭</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
