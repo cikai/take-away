@@ -3,7 +3,6 @@ define([], function() {
     'use strict';
 
     function init() {
-        var dataSet = [ [ "慈凯", "经典烤肉饭", "1", "2016/02/22 09:23:15", "微信" ], [ "尹荐", "经典烤肉饭", "1", "2016/02/22 08:17:34", "微信" ], [ "邵勇", "经典烤肉饭", "1", "2016/02/22 09:01:37", "微信" ], [ "王长远", "经典烤肉饭", "1", "2016/02/22 08:45:46", "支付宝" ], [ "王磊", "经典烤肉饭", "1", "2016/02/22 09:15:39", "支付宝" ], [ "尚小彬", "经典烤肉饭", "1", "2016/02/22 09:20:22", "支付宝" ] ];
 
         initDataTable();
 
@@ -17,7 +16,7 @@ define([], function() {
             dataType: 'json',
             success: function(data) {
                 console.log(data.list);
-                //createTable(data.list);
+                // createTable(data.list);
             },
             error: function(data) {
                 alert("error");
@@ -26,7 +25,7 @@ define([], function() {
     }
 
     function createTable(list) {
-        $('#example').DataTable({
+        $('#orderForm').DataTable({
             data: list,
             columns: [ {
                 title: "姓名"

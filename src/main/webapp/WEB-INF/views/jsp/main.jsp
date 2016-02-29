@@ -79,7 +79,7 @@
     </form>
   </div>
 
-  <table id="example" class="display" width="100%"></table>
+  <table id="orderForm" class="display" width="100%"></table>
 
 </body>
 </html>
