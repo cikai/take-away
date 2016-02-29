@@ -16,17 +16,17 @@ define([], function() {
             dataType: 'json',
             success: function(data) {
                 console.log(data.list);
-                // createTable(data.list);
+                createTable(data.list);
             },
             error: function(data) {
-                alert("error");
+                alert("服务器异常！");
             }
         });
     }
 
     function createTable(list) {
         $('#orderForm').DataTable({
-            data: list,
+            data: list[1],
             columns: [ {
                 title: "姓名"
             }, {

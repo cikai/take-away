@@ -1,11 +1,14 @@
 package me.cikai.dto;
 
+import java.sql.Timestamp;
+
 public class ListDto {
 
     String name;
     int food;
     int count;
     int payment;
+    Timestamp time;
 
     public String getName() {
         return name;
@@ -38,5 +41,13 @@ public class ListDto {
     public void setPayment(int payment) {
         this.payment = payment;
     }
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
 
 }

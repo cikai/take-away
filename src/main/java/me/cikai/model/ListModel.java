@@ -1,11 +1,14 @@
 package me.cikai.model;
 
+import java.sql.Timestamp;
+
 public class ListModel {
 
 	String name;
 	String food;
 	String count;
 	String payment;
+	Timestamp time;
 
 	public String getName() {
 		return name;
@@ -37,6 +40,14 @@ public class ListModel {
 
 	public void setPayment(String payment) {
 		this.payment = payment;
+	}
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
 	}
 
 }

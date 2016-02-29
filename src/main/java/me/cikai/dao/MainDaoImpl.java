@@ -37,14 +37,16 @@ public class MainDaoImpl implements MainDao {
         sql.append("name, ");
         sql.append("food, ");
         sql.append("count, ");
-        sql.append("payment ");
+        sql.append("payment, ");
+        sql.append("time ");
         sql.append(") ");
         sql.append("VALUES ");
         sql.append("( ");
         sql.append(":name, ");
         sql.append(":food, ");
         sql.append(":count, ");
-        sql.append(":payment ");
+        sql.append(":payment, ");
+        sql.append("NOW() ");
         sql.append(") ");
 
         MapSqlParameterSource paramMap = new MapSqlParameterSource();
@@ -82,6 +84,7 @@ public class MainDaoImpl implements MainDao {
             listDto.setFood(rs.getInt("food"));
             listDto.setCount(rs.getInt("count"));
             listDto.setPayment(rs.getInt("payment"));
+            listDto.setTime(rs.getTimestamp("time"));
             return listDto;
         }
     }

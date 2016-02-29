@@ -63,6 +63,7 @@ public class MainController {
         listModel.setFood(String.valueOf(listDto.getFood()));
         listModel.setCount(String.valueOf(listDto.getCount()));
         listModel.setPayment(String.valueOf(listDto.getPayment()));
+        listModel.setTime(listDto.getTime());
         return listModel;
     }
 
